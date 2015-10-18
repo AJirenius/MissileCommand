@@ -1,0 +1,36 @@
+local msg_touch = hash("touch")
+
+function init(self)
+    msg.post(".", "acquire_input_focus")
+end
+
+function final(self)
+    -- Add finalization code here
+    -- Remove this function if not needed
+end
+
+function update(self, dt)
+    -- Add update code here
+    -- Remove this function if not needed
+end
+
+function on_message(self, message_id, message, sender)
+    -- Add message-handling code here
+    -- Remove this function if not needed
+end
+
+local function fire_missile(pos_x,pos_y)
+	print("fire",pos_x,pos_y)
+	
+end
+
+function on_input(self, action_id, action)
+    if action_id == msg_touch then
+    	if action.released == true then fire_missile(action.x,action.y) end
+    end
+end	
+
+function on_reload(self)
+    -- Add reload-handling code here
+    -- Remove this function if not needed
+end

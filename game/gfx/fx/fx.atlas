@@ -1,0 +1,73 @@
+images {
+  image: "/game/gfx/fx/bbs_godray.png"
+}
+images {
+  image: "/game/gfx/fx/bloom_indicator_blob.png"
+}
+images {
+  image: "/game/gfx/fx/bloom_indicator_circle.png"
+}
+images {
+  image: "/game/gfx/fx/lensflare0.png"
+}
+images {
+  image: "/game/gfx/fx/Optical_Flares__362_.png"
+}
+images {
+  image: "/game/gfx/fx/Optical_Flares__362_2.png"
+}
+images {
+  image: "/builtins/graphics/particle_blob.png"
+}
+images {
+  image: "/game/gfx/fx/pixiedust_2.png"
+}
+images {
+  image: "/game/gfx/fx/pixiedust_1.png"
+}
+images {
+  image: "/game/gfx/fx/pixiedust_3.png"
+}
+images {
+  image: "/game/gfx/fx/pixiedust_4.png"
+}
+images {
+  image: "/game/gfx/fx/pixiedust_5.png"
+}
+images {
+  image: "/game/gfx/fx/pollen_cloud.png"
+}
+images {
+  image: "/game/gfx/fx/spark_small_bronze.png"
+}
+images {
+  image: "/game/gfx/fx/spark_small_gold.png"
+}
+images {
+  image: "/game/gfx/fx/spark_small_silver.png"
+}
+images {
+  image: "/game/gfx/fx/streak2.png"
+}
+images {
+  image: "/game/gfx/fx/streak3.png"
+}
+images {
+  image: "/game/gfx/fx/streakflare.png"
+}
+animations {
+  id: "missile_head"
+  images {
+    image: "/game/gfx/fx/pixiedust_3.png"
+  }
+  images {
+    image: "/builtins/graphics/particle_blob.png"
+  }
+  playback: PLAYBACK_ONCE_FORWARD
+  fps: 30
+  flip_horizontal: 0
+  flip_vertical: 0
+}
+margin: 2
+extrude_borders: 0
+inner_padding: 0

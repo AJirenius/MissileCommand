@@ -1,15 +1,17 @@
 [project]
-title = Side-Scroller
+title = Missile Commander
+version = 0.0.1
 
 [bootstrap]
 main_collection = /main/main.collectionc
+render = /main/render/custom.renderc
 
 [input]
 game_binding = /input/game.input_bindingc
 
 [display]
-width = 1280
-height = 720
+width = 800
+height = 600
 
 [physics]
 scale = 0.02
@@ -19,4 +21,8 @@ shared_state = 1
 
 [sprite]
 max_count = 2048
+
+[particle_fx]
+max_count = 256
+max_particle_count = 2048
 
