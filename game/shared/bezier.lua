@@ -1,7 +1,7 @@
 local M = {}
 function M.bezier4(p1,p2,p3,p4,mu)
    local mum1,mum13,mu3;
-   local p = {}
+   local p = vmath.vector3(p1)
    mum1 = 1 - mu
    mum13 = mum1 * mum1 * mum1
    mu3 = mu * mu * mu

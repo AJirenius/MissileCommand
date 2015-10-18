@@ -1,10 +1,10 @@
 
 function init(self)
-	factory.create("/factories#m_exp", vmath.vector3(math.random(1280),math.random(720),0))
+	self.dt = 0.4
 end
 
 function update(self, dt)
-		
+	
 end
 
 function on_message(self, message_id, message)

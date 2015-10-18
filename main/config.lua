@@ -1,0 +1,7 @@
+local M = {}
+
+M.MISSILE_SPEED = 300
+M.MISSILE_BEZIER_OFFSET = 500
+
+return M
+

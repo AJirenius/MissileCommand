@@ -15,7 +15,7 @@ components {
 }
 components {
   id: "script"
-  component: "/explosions/missile_explosion.script"
+  component: "/game/explosions/missile_explosion.script"
   position {
     x: 0.0
     y: 0.0

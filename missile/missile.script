@@ -1,9 +1,0 @@
-local msg_pos = hash("position")
-
-function on_message(self, message_id, message, sender)
-    if message_id == msg_pos then
-    	local pos = vmath.vector3(message.x,message.y,go.get_position().z)
-    	go.set_position(pos)
-    	go.set_rotation(message.rotation)
-    end
-end

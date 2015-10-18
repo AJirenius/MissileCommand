@@ -1,6 +1,6 @@
 components {
   id: "script"
-  component: "/player/player.script"
+  component: "/game/player/player.script"
   position {
     x: 0.0
     y: 0.0

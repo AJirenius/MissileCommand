@@ -1,7 +1,7 @@
 emitters {
   id: "explosion"
   mode: PLAY_MODE_ONCE
-  duration: 0.4
+  duration: 0.2
   space: EMISSION_SPACE_WORLD
   position {
     x: 0.0
@@ -15,7 +15,7 @@ emitters {
     w: 1.0
   }
   tile_source: "/game/gfx/fx/explosion_anim.tilesource"
-  animation: "explosion"
+  animation: "anim"
   material: "/builtins/materials/particlefx.material"
   blend_mode: BLEND_MODE_ADD
   particle_orientation: PARTICLE_ORIENTATION_DEFAULT
@@ -27,7 +27,7 @@ emitters {
     key: EMITTER_KEY_SPAWN_RATE
     points {
       x: 0.0
-      y: 10.0
+      y: 15.0
       t_x: 1.0
       t_y: 0.0
     }
@@ -37,7 +37,7 @@ emitters {
     key: EMITTER_KEY_SIZE_X
     points {
       x: 0.0
-      y: 50.0
+      y: 40.0
       t_x: 1.0
       t_y: 0.0
     }
@@ -47,7 +47,7 @@ emitters {
     key: EMITTER_KEY_SIZE_Y
     points {
       x: 0.0
-      y: 50.0
+      y: 40.0
       t_x: 1.0
       t_y: 0.0
     }
@@ -67,7 +67,7 @@ emitters {
     key: EMITTER_KEY_PARTICLE_LIFE_TIME
     points {
       x: 0.0
-      y: 1.0
+      y: 1.5
       t_x: 1.0
       t_y: 0.0
     }
@@ -91,7 +91,7 @@ emitters {
       t_x: 1.0
       t_y: 0.0
     }
-    spread: 30.0
+    spread: 60.0
   }
   properties {
     key: EMITTER_KEY_PARTICLE_RED
@@ -141,15 +141,21 @@ emitters {
       t_x: 1.0
       t_y: 0.0
     }
-    spread: 0.0
+    spread: 360.0
   }
   particle_properties {
     key: PARTICLE_KEY_SCALE
     points {
       x: 0.0
-      y: 1.0
-      t_x: 1.0
-      t_y: 0.0
+      y: 0.44408602
+      t_x: 0.6563803
+      t_y: 0.7544302
+    }
+    points {
+      x: 1.0
+      y: 1.6636646
+      t_x: 0.7215569
+      t_y: 0.69235516
     }
   }
   particle_properties {
@@ -183,15 +189,9 @@ emitters {
     key: PARTICLE_KEY_ALPHA
     points {
       x: 0.0
-      y: 0.0
-      t_x: 0.07194582
-      t_y: 0.99740857
-    }
-    points {
-      x: 0.11320755
-      y: 0.99277455
-      t_x: 0.99418455
-      t_y: 0.10768964
+      y: 0.99376214
+      t_x: 0.99781144
+      t_y: -0.06612377
     }
     points {
       x: 0.7112546
@@ -219,7 +219,7 @@ emitters {
 emitters {
   id: "sparks"
   mode: PLAY_MODE_ONCE
-  duration: 0.3
+  duration: 0.5
   space: EMISSION_SPACE_WORLD
   position {
     x: 0.0
@@ -240,12 +240,12 @@ emitters {
   inherit_velocity: 0.0
   max_particle_count: 128
   type: EMITTER_TYPE_CIRCLE
-  start_delay: 0.2
+  start_delay: 0.7
   properties {
     key: EMITTER_KEY_SPAWN_RATE
     points {
       x: 0.0
-      y: 100.0
+      y: 40.0
       t_x: 1.0
       t_y: 0.0
     }
@@ -255,7 +255,7 @@ emitters {
     key: EMITTER_KEY_SIZE_X
     points {
       x: 0.0
-      y: 60.0
+      y: 160.0
       t_x: 1.0
       t_y: 0.0
     }
@@ -285,27 +285,27 @@ emitters {
     key: EMITTER_KEY_PARTICLE_LIFE_TIME
     points {
       x: 0.0
-      y: 1.5
+      y: 1.2
       t_x: 1.0
       t_y: 0.0
     }
-    spread: 0.0
+    spread: 1.2
   }
   properties {
     key: EMITTER_KEY_PARTICLE_SPEED
     points {
       x: 0.0
-      y: 100.0
+      y: 120.0
       t_x: 1.0
       t_y: 0.0
     }
-    spread: 60.0
+    spread: 120.0
   }
   properties {
     key: EMITTER_KEY_PARTICLE_SIZE
     points {
       x: 0.0
-      y: 20.0
+      y: 30.0
       t_x: 1.0
       t_y: 0.0
     }
@@ -369,6 +369,24 @@ emitters {
       t_x: 1.0
       t_y: 0.0
     }
+    points {
+      x: 0.27430555
+      y: 0.98839754
+      t_x: 0.94346696
+      t_y: -0.3314666
+    }
+    points {
+      x: 0.4965278
+      y: 0.13969544
+      t_x: 0.971711
+      t_y: -0.23617326
+    }
+    points {
+      x: 1.0
+      y: 0.030107526
+      t_x: 0.82490987
+      t_y: -0.5652643
+    }
   }
   particle_properties {
     key: PARTICLE_KEY_RED
@@ -406,16 +424,16 @@ emitters {
       t_y: 0.99740857
     }
     points {
-      x: 0.11320755
+      x: 0.04029088
       y: 0.99277455
       t_x: 0.99418455
       t_y: 0.10768964
     }
     points {
-      x: 0.7112546
-      y: 0.555656
-      t_x: 0.5694311
-      t_y: -0.82203907
+      x: 0.6921574
+      y: 0.8868388
+      t_x: 0.9487196
+      t_y: -0.3161188
     }
     points {
       x: 1.0
@@ -433,16 +451,41 @@ emitters {
       t_y: 0.0
     }
   }
+  modifiers {
+    type: MODIFIER_TYPE_DRAG
+    use_direction: 0
+    position {
+      x: 0.0
+      y: 0.0
+      z: 0.0
+    }
+    rotation {
+      x: 0.0
+      y: 0.0
+      z: 0.0
+      w: 1.0
+    }
+    properties {
+      key: MODIFIER_KEY_MAGNITUDE
+      points {
+        x: 0.0
+        y: 1.0
+        t_x: 1.0
+        t_y: 0.0
+      }
+      spread: 0.0
+    }
+  }
 }
 emitters {
-  id: "smoke"
+  id: "explosion1"
   mode: PLAY_MODE_ONCE
   duration: 0.4
   space: EMISSION_SPACE_WORLD
   position {
     x: 0.0
     y: 0.0
-    z: -0.1
+    z: 0.0
   }
   rotation {
     x: 0.0
@@ -450,20 +493,20 @@ emitters {
     z: 0.0
     w: 1.0
   }
-  tile_source: "/game/gfx/fx/smoke.tilesource"
-  animation: "smoke"
+  tile_source: "/game/gfx/fx/explosion_anim.tilesource"
+  animation: "explosion"
   material: "/builtins/materials/particlefx.material"
-  blend_mode: BLEND_MODE_MULT
+  blend_mode: BLEND_MODE_ADD
   particle_orientation: PARTICLE_ORIENTATION_DEFAULT
   inherit_velocity: 0.0
   max_particle_count: 128
   type: EMITTER_TYPE_BOX
-  start_delay: 0.5
+  start_delay: 0.35
   properties {
     key: EMITTER_KEY_SPAWN_RATE
     points {
       x: 0.0
-      y: 10.0
+      y: 3.0
       t_x: 1.0
       t_y: 0.0
     }
@@ -473,7 +516,7 @@ emitters {
     key: EMITTER_KEY_SIZE_X
     points {
       x: 0.0
-      y: 50.0
+      y: 20.0
       t_x: 1.0
       t_y: 0.0
     }
@@ -483,7 +526,7 @@ emitters {
     key: EMITTER_KEY_SIZE_Y
     points {
       x: 0.0
-      y: 50.0
+      y: 20.0
       t_x: 1.0
       t_y: 0.0
     }
@@ -503,7 +546,7 @@ emitters {
     key: EMITTER_KEY_PARTICLE_LIFE_TIME
     points {
       x: 0.0
-      y: 1.0
+      y: 1.5
       t_x: 1.0
       t_y: 0.0
     }
@@ -563,7 +606,7 @@ emitters {
     key: EMITTER_KEY_PARTICLE_ALPHA
     points {
       x: 0.0
-      y: 0.2
+      y: 1.0
       t_x: 1.0
       t_y: 0.0
     }
@@ -577,15 +620,21 @@ emitters {
       t_x: 1.0
       t_y: 0.0
     }
-    spread: 0.0
+    spread: 360.0
   }
   particle_properties {
     key: PARTICLE_KEY_SCALE
     points {
       x: 0.0
-      y: 1.0
-      t_x: 1.0
-      t_y: 0.0
+      y: 0.7459288
+      t_x: 0.7894112
+      t_y: 0.6138648
+    }
+    points {
+      x: 1.0
+      y: 1.2263523
+      t_x: 0.8291351
+      t_y: 0.5590483
     }
   }
   particle_properties {

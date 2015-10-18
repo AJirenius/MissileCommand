@@ -63,8 +63,27 @@ animations {
   images {
     image: "/builtins/graphics/particle_blob.png"
   }
+  playback: PLAYBACK_LOOP_FORWARD
+  fps: 15
+  flip_horizontal: 0
+  flip_vertical: 0
+}
+animations {
+  id: "crosshair"
+  images {
+    image: "/game/gfx/crosshair1.png"
+  }
+  images {
+    image: "/game/gfx/crosshair2.png"
+  }
+  images {
+    image: "/game/gfx/crosshair3.png"
+  }
+  images {
+    image: "/game/gfx/crosshair4.png"
+  }
   playback: PLAYBACK_ONCE_FORWARD
-  fps: 30
+  fps: 10
   flip_horizontal: 0
   flip_vertical: 0
 }
