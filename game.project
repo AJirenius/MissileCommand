@@ -12,6 +12,7 @@ game_binding = /input/game.input_bindingc
 [display]
 width = 800
 height = 600
+variable_dt = 1
 
 [physics]
 scale = 0.02
@@ -25,5 +26,5 @@ max_count = 2048
 
 [particle_fx]
 max_count = 256
-max_particle_count = 2048
+max_particle_count = 4096
 

@@ -1,15 +1,23 @@
+local missile_manager = require "game.missile.missile_manager"
 
 function init(self)
-	self.dt = 0.4
-end
-
-function update(self, dt)
+	self.demo = true
+	math.randomseed(os.time())
+	
+	self.dt = 0
+	self.max_time = 3
+	
+	local n = msg.url()
 	
 end
 
-function on_message(self, message_id, message)
-end
-
-function on_input(self, action_id, action)
-
+function update(self, dt)
+	if self.dt < 0 then
+		self.dt = self.max_time
+		self.max_time = self.max_time - 0.1
+		if self.max_time < 0.5 then self.max_time = 0.5 end
+		factory.create("/factories#meteor",nil,nil,{},math.random()*0.5+0.5)
+		if self.demo then missile_manager.add_missile(math.random(800),math.random(300)+300) end	
+	end
+	self.dt = self.dt - dt
 end

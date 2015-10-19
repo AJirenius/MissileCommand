@@ -1,8 +1,8 @@
 emitters {
   id: "emitter"
   mode: PLAY_MODE_LOOP
-  duration: 1.0
-  space: EMISSION_SPACE_WORLD
+  duration: 0.2
+  space: EMISSION_SPACE_EMITTER
   position {
     x: 0.0
     y: 0.0
@@ -14,8 +14,8 @@ emitters {
     z: 0.0
     w: 1.0
   }
-  tile_source: "/game/gfx/fx.atlas"
-  animation: "streakflare"
+  tile_source: "/game/gfx/fx/explosion_anim.tilesource"
+  animation: "explosion"
   material: "/builtins/materials/particlefx.material"
   blend_mode: BLEND_MODE_ADD
   particle_orientation: PARTICLE_ORIENTATION_DEFAULT
@@ -27,7 +27,7 @@ emitters {
     key: EMITTER_KEY_SPAWN_RATE
     points {
       x: 0.0
-      y: 60.0
+      y: 4.0
       t_x: 1.0
       t_y: 0.0
     }
@@ -37,17 +37,17 @@ emitters {
     key: EMITTER_KEY_SIZE_X
     points {
       x: 0.0
-      y: 1.0
+      y: 2.0
       t_x: 1.0
       t_y: 0.0
     }
-    spread: 10.0
+    spread: 0.0
   }
   properties {
     key: EMITTER_KEY_SIZE_Y
     points {
       x: 0.0
-      y: 1.0
+      y: 2.0
       t_x: 1.0
       t_y: 0.0
     }
@@ -67,7 +67,7 @@ emitters {
     key: EMITTER_KEY_PARTICLE_LIFE_TIME
     points {
       x: 0.0
-      y: 0.8
+      y: 0.7
       t_x: 1.0
       t_y: 0.0
     }
@@ -87,7 +87,7 @@ emitters {
     key: EMITTER_KEY_PARTICLE_SIZE
     points {
       x: 0.0
-      y: 40.0
+      y: 15.0
       t_x: 1.0
       t_y: 0.0
     }
@@ -141,25 +141,13 @@ emitters {
       t_x: 1.0
       t_y: 0.0
     }
-    spread: 0.0
+    spread: 360.0
   }
   particle_properties {
     key: PARTICLE_KEY_SCALE
     points {
       x: 0.0
-      y: 0.78143895
-      t_x: 0.03257793
-      t_y: 0.9994692
-    }
-    points {
-      x: 0.35672516
-      y: 1.0290297
-      t_x: 1.0
-      t_y: 0.0
-    }
-    points {
-      x: 1.0
-      y: 1.8523055
+      y: 1.0
       t_x: 1.0
       t_y: 0.0
     }
@@ -206,14 +194,8 @@ emitters {
       t_y: 0.10768964
     }
     points {
-      x: 0.34502923
-      y: 0.8730556
-      t_x: 0.7186131
-      t_y: -0.6954101
-    }
-    points {
-      x: 0.4744125
-      y: 0.32341826
+      x: 0.7112546
+      y: 0.555656
       t_x: 0.5694311
       t_y: -0.82203907
     }

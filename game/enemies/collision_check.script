@@ -1,0 +1,8 @@
+local group_missile = hash("missile")
+local msg_collision_response = hash("collision_response")
+
+function on_message(self, message_id, message, sender)
+    if message_id == msg_collision_response and message.group == group_missile then
+    	msg.post(".",hash("explode"))
+    end
+end

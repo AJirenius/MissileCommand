@@ -4,14 +4,17 @@ local missile_manager = require "game.missile.missile_manager"
 
 local msg_pos = hash("position")
 
-go.property("id", hash("")) -- vector3
+go.property("nr", 0) -- vector3
+go.property("missile_id", hash("")) -- vector3
 go.property("start_pos", vmath.vector3()) -- vector3
 go.property("end_pos", vmath.vector3())	-- vector3
 go.property("position_index", 0) -- controls where we are in the movement towards target
 
 local function on_reached_target(self)
-	factory.create("/factories#missile_explosion", vmath.vector3(self.end_pos.x,self.end_pos.y,0), nil, {}, 1.5) 
-	missile_manager.remove_missile(self.id)
+	if self.nr == 1 then
+		factory.create("/factories#missile_explosion", vmath.vector3(self.end_pos.x,self.end_pos.y,0), nil, {}, 1.0) 
+		missile_manager.remove_missile(self.missile_id)
+	end
 	go.delete()
 end
 

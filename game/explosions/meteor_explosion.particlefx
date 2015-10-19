@@ -1,5 +1,5 @@
 emitters {
-  id: "explosion"
+  id: "emitter"
   mode: PLAY_MODE_ONCE
   duration: 0.2
   space: EMISSION_SPACE_WORLD
@@ -14,20 +14,20 @@ emitters {
     z: 0.0
     w: 1.0
   }
-  tile_source: "/game/gfx/fx/explosion_anim.tilesource"
-  animation: "anim"
+  tile_source: "/game/gfx/fx.atlas"
+  animation: "lensflare0"
   material: "/builtins/materials/particlefx.material"
   blend_mode: BLEND_MODE_ADD
   particle_orientation: PARTICLE_ORIENTATION_DEFAULT
   inherit_velocity: 0.0
   max_particle_count: 128
-  type: EMITTER_TYPE_BOX
+  type: EMITTER_TYPE_CIRCLE
   start_delay: 0.0
   properties {
     key: EMITTER_KEY_SPAWN_RATE
     points {
       x: 0.0
-      y: 15.0
+      y: 10.0
       t_x: 1.0
       t_y: 0.0
     }
@@ -37,7 +37,7 @@ emitters {
     key: EMITTER_KEY_SIZE_X
     points {
       x: 0.0
-      y: 40.0
+      y: 8.0
       t_x: 1.0
       t_y: 0.0
     }
@@ -47,7 +47,7 @@ emitters {
     key: EMITTER_KEY_SIZE_Y
     points {
       x: 0.0
-      y: 40.0
+      y: 12.0
       t_x: 1.0
       t_y: 0.0
     }
@@ -67,11 +67,11 @@ emitters {
     key: EMITTER_KEY_PARTICLE_LIFE_TIME
     points {
       x: 0.0
-      y: 1.5
+      y: 1.2
       t_x: 1.0
       t_y: 0.0
     }
-    spread: 0.2
+    spread: 0.0
   }
   properties {
     key: EMITTER_KEY_PARTICLE_SPEED
@@ -87,11 +87,11 @@ emitters {
     key: EMITTER_KEY_PARTICLE_SIZE
     points {
       x: 0.0
-      y: 100.0
+      y: 70.0
       t_x: 1.0
       t_y: 0.0
     }
-    spread: 60.0
+    spread: 0.0
   }
   properties {
     key: EMITTER_KEY_PARTICLE_RED
@@ -147,15 +147,21 @@ emitters {
     key: PARTICLE_KEY_SCALE
     points {
       x: 0.0
-      y: 0.44408602
-      t_x: 0.6563803
-      t_y: 0.7544302
+      y: 1.0
+      t_x: 1.0
+      t_y: 0.0
+    }
+    points {
+      x: 0.2585752
+      y: 4.8345323
+      t_x: 0.988792
+      t_y: -0.14929955
     }
     points {
       x: 1.0
-      y: 1.6636646
-      t_x: 0.7215569
-      t_y: 0.69235516
+      y: 0.46647114
+      t_x: 0.93620265
+      t_y: 0.3514607
     }
   }
   particle_properties {
@@ -189,21 +195,33 @@ emitters {
     key: PARTICLE_KEY_ALPHA
     points {
       x: 0.0
-      y: 0.99376214
-      t_x: 0.99781144
-      t_y: -0.06612377
+      y: 0.0
+      t_x: 0.07194582
+      t_y: 0.99740857
     }
     points {
-      x: 0.7112546
-      y: 0.555656
+      x: 0.11320755
+      y: 0.99277455
+      t_x: 0.99418455
+      t_y: 0.10768964
+    }
+    points {
+      x: 0.41046304
+      y: 0.8161352
       t_x: 0.5694311
       t_y: -0.82203907
     }
     points {
+      x: 0.5277045
+      y: 0.095351994
+      t_x: 0.9966441
+      t_y: 0.08185713
+    }
+    points {
       x: 1.0
       y: 0.0072254334
-      t_x: 0.4737472
-      t_y: -0.8806609
+      t_x: 0.93523383
+      t_y: -0.3540307
     }
   }
   particle_properties {
@@ -219,7 +237,7 @@ emitters {
 emitters {
   id: "sparks"
   mode: PLAY_MODE_ONCE
-  duration: 0.5
+  duration: 0.3
   space: EMISSION_SPACE_WORLD
   position {
     x: 0.0
@@ -232,20 +250,20 @@ emitters {
     z: 0.0
     w: 1.0
   }
-  tile_source: "/game/gfx/fx/fx.atlas"
-  animation: "streakflare"
+  tile_source: "/game/gfx/fx.atlas"
+  animation: "lensflare0"
   material: "/builtins/materials/particlefx.material"
   blend_mode: BLEND_MODE_ADD
   particle_orientation: PARTICLE_ORIENTATION_INITIAL_DIRECTION
   inherit_velocity: 0.0
   max_particle_count: 128
   type: EMITTER_TYPE_CIRCLE
-  start_delay: 0.7
+  start_delay: 0.2
   properties {
     key: EMITTER_KEY_SPAWN_RATE
     points {
       x: 0.0
-      y: 40.0
+      y: 45.0
       t_x: 1.0
       t_y: 0.0
     }
@@ -255,7 +273,7 @@ emitters {
     key: EMITTER_KEY_SIZE_X
     points {
       x: 0.0
-      y: 160.0
+      y: 40.0
       t_x: 1.0
       t_y: 0.0
     }
@@ -285,21 +303,21 @@ emitters {
     key: EMITTER_KEY_PARTICLE_LIFE_TIME
     points {
       x: 0.0
-      y: 1.2
+      y: 2.0
       t_x: 1.0
       t_y: 0.0
     }
-    spread: 1.2
+    spread: 2.0
   }
   properties {
     key: EMITTER_KEY_PARTICLE_SPEED
     points {
       x: 0.0
-      y: 120.0
+      y: 80.0
       t_x: 1.0
       t_y: 0.0
     }
-    spread: 120.0
+    spread: 80.0
   }
   properties {
     key: EMITTER_KEY_PARTICLE_SIZE
@@ -477,11 +495,9 @@ emitters {
     }
   }
 }
-emitters {
-  id: "explosion1"
-  mode: PLAY_MODE_ONCE
-  duration: 0.4
-  space: EMISSION_SPACE_WORLD
+modifiers {
+  type: MODIFIER_TYPE_ACCELERATION
+  use_direction: 0
   position {
     x: 0.0
     y: 0.0
@@ -493,211 +509,14 @@ emitters {
     z: 0.0
     w: 1.0
   }
-  tile_source: "/game/gfx/fx/explosion_anim.tilesource"
-  animation: "explosion"
-  material: "/builtins/materials/particlefx.material"
-  blend_mode: BLEND_MODE_ADD
-  particle_orientation: PARTICLE_ORIENTATION_DEFAULT
-  inherit_velocity: 0.0
-  max_particle_count: 128
-  type: EMITTER_TYPE_BOX
-  start_delay: 0.35
   properties {
-    key: EMITTER_KEY_SPAWN_RATE
+    key: MODIFIER_KEY_MAGNITUDE
     points {
       x: 0.0
-      y: 3.0
+      y: -100.0
       t_x: 1.0
       t_y: 0.0
     }
     spread: 0.0
-  }
-  properties {
-    key: EMITTER_KEY_SIZE_X
-    points {
-      x: 0.0
-      y: 20.0
-      t_x: 1.0
-      t_y: 0.0
-    }
-    spread: 0.0
-  }
-  properties {
-    key: EMITTER_KEY_SIZE_Y
-    points {
-      x: 0.0
-      y: 20.0
-      t_x: 1.0
-      t_y: 0.0
-    }
-    spread: 0.0
-  }
-  properties {
-    key: EMITTER_KEY_SIZE_Z
-    points {
-      x: 0.0
-      y: 0.0
-      t_x: 1.0
-      t_y: 0.0
-    }
-    spread: 0.0
-  }
-  properties {
-    key: EMITTER_KEY_PARTICLE_LIFE_TIME
-    points {
-      x: 0.0
-      y: 1.5
-      t_x: 1.0
-      t_y: 0.0
-    }
-    spread: 0.2
-  }
-  properties {
-    key: EMITTER_KEY_PARTICLE_SPEED
-    points {
-      x: 0.0
-      y: 0.0
-      t_x: 1.0
-      t_y: 0.0
-    }
-    spread: 0.0
-  }
-  properties {
-    key: EMITTER_KEY_PARTICLE_SIZE
-    points {
-      x: 0.0
-      y: 200.0
-      t_x: 1.0
-      t_y: 0.0
-    }
-    spread: 30.0
-  }
-  properties {
-    key: EMITTER_KEY_PARTICLE_RED
-    points {
-      x: 0.0
-      y: 1.0
-      t_x: 1.0
-      t_y: 0.0
-    }
-    spread: 0.0
-  }
-  properties {
-    key: EMITTER_KEY_PARTICLE_GREEN
-    points {
-      x: 0.0
-      y: 1.0
-      t_x: 1.0
-      t_y: 0.0
-    }
-    spread: 0.0
-  }
-  properties {
-    key: EMITTER_KEY_PARTICLE_BLUE
-    points {
-      x: 0.0
-      y: 1.0
-      t_x: 1.0
-      t_y: 0.0
-    }
-    spread: 0.0
-  }
-  properties {
-    key: EMITTER_KEY_PARTICLE_ALPHA
-    points {
-      x: 0.0
-      y: 1.0
-      t_x: 1.0
-      t_y: 0.0
-    }
-    spread: 0.0
-  }
-  properties {
-    key: EMITTER_KEY_PARTICLE_ROTATION
-    points {
-      x: 0.0
-      y: 0.0
-      t_x: 1.0
-      t_y: 0.0
-    }
-    spread: 360.0
-  }
-  particle_properties {
-    key: PARTICLE_KEY_SCALE
-    points {
-      x: 0.0
-      y: 0.7459288
-      t_x: 0.7894112
-      t_y: 0.6138648
-    }
-    points {
-      x: 1.0
-      y: 1.2263523
-      t_x: 0.8291351
-      t_y: 0.5590483
-    }
-  }
-  particle_properties {
-    key: PARTICLE_KEY_RED
-    points {
-      x: 0.0
-      y: 1.0
-      t_x: 1.0
-      t_y: 0.0
-    }
-  }
-  particle_properties {
-    key: PARTICLE_KEY_GREEN
-    points {
-      x: 0.0
-      y: 1.0
-      t_x: 1.0
-      t_y: 0.0
-    }
-  }
-  particle_properties {
-    key: PARTICLE_KEY_BLUE
-    points {
-      x: 0.0
-      y: 1.0
-      t_x: 1.0
-      t_y: 0.0
-    }
-  }
-  particle_properties {
-    key: PARTICLE_KEY_ALPHA
-    points {
-      x: 0.0
-      y: 0.0
-      t_x: 0.07194582
-      t_y: 0.99740857
-    }
-    points {
-      x: 0.11320755
-      y: 0.99277455
-      t_x: 0.99418455
-      t_y: 0.10768964
-    }
-    points {
-      x: 0.7112546
-      y: 0.555656
-      t_x: 0.5694311
-      t_y: -0.82203907
-    }
-    points {
-      x: 1.0
-      y: 0.0072254334
-      t_x: 0.4737472
-      t_y: -0.8806609
-    }
-  }
-  particle_properties {
-    key: PARTICLE_KEY_ROTATION
-    points {
-      x: 0.0
-      y: 0.0
-      t_x: 1.0
-      t_y: 0.0
-    }
   }
 }

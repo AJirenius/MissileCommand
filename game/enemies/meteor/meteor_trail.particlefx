@@ -1,7 +1,7 @@
 emitters {
   id: "emitter"
   mode: PLAY_MODE_LOOP
-  duration: 1.0
+  duration: 0.1
   space: EMISSION_SPACE_WORLD
   position {
     x: 0.0
@@ -15,7 +15,7 @@ emitters {
     w: 1.0
   }
   tile_source: "/game/gfx/fx.atlas"
-  animation: "streakflare"
+  animation: "lensflare0"
   material: "/builtins/materials/particlefx.material"
   blend_mode: BLEND_MODE_ADD
   particle_orientation: PARTICLE_ORIENTATION_DEFAULT
@@ -27,7 +27,7 @@ emitters {
     key: EMITTER_KEY_SPAWN_RATE
     points {
       x: 0.0
-      y: 60.0
+      y: 22.0
       t_x: 1.0
       t_y: 0.0
     }
@@ -37,17 +37,17 @@ emitters {
     key: EMITTER_KEY_SIZE_X
     points {
       x: 0.0
-      y: 1.0
+      y: 4.0
       t_x: 1.0
       t_y: 0.0
     }
-    spread: 10.0
+    spread: 0.0
   }
   properties {
     key: EMITTER_KEY_SIZE_Y
     points {
       x: 0.0
-      y: 1.0
+      y: 4.0
       t_x: 1.0
       t_y: 0.0
     }
@@ -67,7 +67,7 @@ emitters {
     key: EMITTER_KEY_PARTICLE_LIFE_TIME
     points {
       x: 0.0
-      y: 0.8
+      y: 5.0
       t_x: 1.0
       t_y: 0.0
     }
@@ -87,7 +87,7 @@ emitters {
     key: EMITTER_KEY_PARTICLE_SIZE
     points {
       x: 0.0
-      y: 40.0
+      y: 15.0
       t_x: 1.0
       t_y: 0.0
     }
@@ -127,7 +127,7 @@ emitters {
     key: EMITTER_KEY_PARTICLE_ALPHA
     points {
       x: 0.0
-      y: 1.0
+      y: 0.6
       t_x: 1.0
       t_y: 0.0
     }
@@ -147,21 +147,21 @@ emitters {
     key: PARTICLE_KEY_SCALE
     points {
       x: 0.0
-      y: 0.78143895
-      t_x: 0.03257793
-      t_y: 0.9994692
-    }
-    points {
-      x: 0.35672516
-      y: 1.0290297
+      y: 1.9903374
       t_x: 1.0
       t_y: 0.0
+    }
+    points {
+      x: 0.14775726
+      y: 0.7779522
+      t_x: 0.8906382
+      t_y: -0.45471275
     }
     points {
       x: 1.0
-      y: 1.8523055
-      t_x: 1.0
-      t_y: 0.0
+      y: 0.612229
+      t_x: 0.7217038
+      t_y: 0.692202
     }
   }
   particle_properties {
@@ -200,28 +200,28 @@ emitters {
       t_y: 0.99740857
     }
     points {
-      x: 0.11320755
+      x: 0.0366904
       y: 0.99277455
       t_x: 0.99418455
       t_y: 0.10768964
     }
     points {
-      x: 0.34502923
-      y: 0.8730556
-      t_x: 0.7186131
-      t_y: -0.6954101
+      x: 0.34657568
+      y: 0.23519965
+      t_x: 0.7135872
+      t_y: -0.7005664
     }
     points {
-      x: 0.4744125
-      y: 0.32341826
-      t_x: 0.5694311
-      t_y: -0.82203907
+      x: 0.70989764
+      y: 0.06619314
+      t_x: 0.9724932
+      t_y: -0.23293142
     }
     points {
       x: 1.0
-      y: 0.0072254334
-      t_x: 0.4737472
-      t_y: -0.8806609
+      y: 0.034957234
+      t_x: 0.9999746
+      t_y: -0.0071231173
     }
   }
   particle_properties {

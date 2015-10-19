@@ -1,3 +1,5 @@
+local config = require "main.config"
+
 local M = {}
 
 local missiles = {}
@@ -5,7 +7,9 @@ local m_count = 0
 
 local function create_missile(missile)
 	missile.crosshair_id = factory.create("/factories#crosshair", missile.target_pos, nil, {}, 0.5)
-	missile.missile_id = factory.create("/factories#missile", nil, nil, { id = missile.id, start_pos = vmath.vector3(200,0,0), end_pos = missile.target_pos }, 0.75)
+	for i=1,config.NR_MISSILES_IN_SHOT do
+		missile.missile_id = factory.create("/factories#missile", nil, nil, { nr = i, missile_id = missile.id, start_pos = vmath.vector3(200,100,0), end_pos = missile.target_pos }, 0.5)
+	end
 end
 
 function M.add_missile(pos_x,pos_y)

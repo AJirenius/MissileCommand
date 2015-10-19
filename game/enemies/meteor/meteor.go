@@ -1,6 +1,21 @@
 components {
-  id: "fx"
-  component: "/game/explosions/missile_explosion.particlefx"
+  id: "collision"
+  component: "/game/enemies/collision_check.script"
+  position {
+    x: 0.0
+    y: 0.0
+    z: 0.0
+  }
+  rotation {
+    x: 0.0
+    y: 0.0
+    z: 0.0
+    w: 1.0
+  }
+}
+components {
+  id: "head_fx"
+  component: "/game/enemies/meteor/meteor.particlefx"
   position {
     x: 0.0
     y: 0.0
@@ -15,7 +30,22 @@ components {
 }
 components {
   id: "script"
-  component: "/game/explosions/missile_explosion.script"
+  component: "/game/enemies/meteor/meteor.script"
+  position {
+    x: 0.0
+    y: 0.0
+    z: 0.0
+  }
+  rotation {
+    x: 0.0
+    y: 0.0
+    z: 0.0
+    w: 1.0
+  }
+}
+components {
+  id: "trail_fx"
+  component: "/game/enemies/meteor/meteor_trail.particlefx"
   position {
     x: 0.0
     y: 0.0
@@ -32,15 +62,15 @@ embedded_components {
   id: "collisionobject"
   type: "collisionobject"
   data: "collision_shape: \"\"\n"
-  "type: COLLISION_OBJECT_TYPE_DYNAMIC\n"
-  "mass: 1.0\n"
+  "type: COLLISION_OBJECT_TYPE_TRIGGER\n"
+  "mass: 0.0\n"
   "friction: 0.1\n"
   "restitution: 0.5\n"
-  "group: \"missile\"\n"
-  "mask: \"enemy\"\n"
+  "group: \"enemy\"\n"
+  "mask: \"missile\"\n"
   "embedded_collision_shape {\n"
   "  shapes {\n"
-  "    shape_type: TYPE_SPHERE\n"
+  "    shape_type: TYPE_BOX\n"
   "    position {\n"
   "      x: 0.0\n"
   "      y: 0.0\n"
@@ -53,9 +83,11 @@ embedded_components {
   "      w: 1.0\n"
   "    }\n"
   "    index: 0\n"
-  "    count: 1\n"
+  "    count: 3\n"
   "  }\n"
-  "  data: 50.0\n"
+  "  data: 10.0\n"
+  "  data: 10.0\n"
+  "  data: 10.0\n"
   "}\n"
   "linear_damping: 0.0\n"
   "angular_damping: 0.0\n"
