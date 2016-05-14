@@ -1,0 +1,11 @@
+function init(self)
+    self.life_node = gui.get_node("life")
+    self.score_node = gui.get_node("score")
+end
+
+function on_message(self, message_id, message, sender)
+    if message_id == hash("update") then
+   		if message.life then gui.set_text(self.life_node,tostring(message.life)) end 	
+   		if message.score then gui.set_text(self.score_node,tostring(message.score)) end 	
+    end
+end

@@ -1,10 +1,30 @@
 name: "parallax"
 instances {
+  id: "hud"
+  prototype: "/game/hud/hud.go"
+  position {
+    x: 400.0
+    y: 300.0
+    z: -0.1
+  }
+  rotation {
+    x: 0.0
+    y: 0.0
+    z: 0.0
+    w: 1.0
+  }
+  scale3 {
+    x: 1.0
+    y: 1.0
+    z: 1.0
+  }
+}
+instances {
   id: "player"
   prototype: "/game/player/player.go"
   position {
-    x: 0.0
-    y: 0.0
+    x: 432.95935
+    y: 338.40503
     z: 0.0
   }
   rotation {
@@ -20,6 +40,26 @@ instances {
   }
 }
 scale_along_z: 0
+embedded_instances {
+  id: "bg"
+  data: ""
+  position {
+    x: 400.0
+    y: 300.0
+    z: -0.1
+  }
+  rotation {
+    x: 0.0
+    y: 0.0
+    z: 0.0
+    w: 1.0
+  }
+  scale3 {
+    x: 1.0
+    y: 1.0
+    z: 1.0
+  }
+}
 embedded_instances {
   id: "factories"
   data: "embedded_components {\n"
@@ -112,46 +152,6 @@ embedded_instances {
     x: 0.0
     y: 0.0
     z: 0.0
-  }
-  rotation {
-    x: 0.0
-    y: 0.0
-    z: 0.0
-    w: 1.0
-  }
-  scale3 {
-    x: 1.0
-    y: 1.0
-    z: 1.0
-  }
-}
-embedded_instances {
-  id: "bg"
-  data: "embedded_components {\n"
-  "  id: \"sprite\"\n"
-  "  type: \"sprite\"\n"
-  "  data: \"tile_set: \\\"/game/gfx/bg.atlas\\\"\\n"
-  "default_animation: \\\"test_bg\\\"\\n"
-  "material: \\\"/builtins/materials/sprite.material\\\"\\n"
-  "blend_mode: BLEND_MODE_ALPHA\\n"
-  "\"\n"
-  "  position {\n"
-  "    x: 0.0\n"
-  "    y: 0.0\n"
-  "    z: 0.0\n"
-  "  }\n"
-  "  rotation {\n"
-  "    x: 0.0\n"
-  "    y: 0.0\n"
-  "    z: 0.0\n"
-  "    w: 1.0\n"
-  "  }\n"
-  "}\n"
-  ""
-  position {
-    x: 400.0
-    y: 300.0
-    z: -0.1
   }
   rotation {
     x: 0.0

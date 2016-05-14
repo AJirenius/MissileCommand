@@ -1,12 +1,16 @@
 local config = require "main.config"
+local score = require "game.score"
+local life = require "game.life"
 
 local function on_reached_target(self)
 	go.delete()
+	life.dec_life()
 end
 
 local function explode(self)
 	factory.create("/factories#meteor_explosion",go.get_position())
 	go.delete()
+	score.add_score(config.SCORE_PER_METEOR)
 end
 
 function init(self)

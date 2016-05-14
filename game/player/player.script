@@ -4,32 +4,13 @@ local msg_touch = hash("touch")
 
 function init(self)
     msg.post(".", "acquire_input_focus")
-    self.dt = 0.7
-end
-
-function final(self)
-    -- Add finalization code here
-    -- Remove this function if not needed
 end
 
 local function fire_missile(pos_x,pos_y)
-	missile_manager.add_missile(pos_x,pos_y)
+	if go.get("/main#script", "is_playing") == true then
+		missile_manager.add_missile(pos_x,pos_y)
+	end
 end
-
-function update(self, dt)
- --[[   self.dt = self.dt -dt
-    if self.dt < 0 then
-    	fire_missile(math.random(800),math.random(300)+300)
-    	self.dt = 0.7
-    end
- --]]   
-end
-
-function on_message(self, message_id, message, sender)
-    -- Add message-handling code here
-    -- Remove this function if not needed
-end
-
 
 
 function on_input(self, action_id, action)
@@ -37,8 +18,3 @@ function on_input(self, action_id, action)
     	if action.released == true then fire_missile(action.x,action.y) end
     end
 end	
-
-function on_reload(self)
-    -- Add reload-handling code here
-    -- Remove this function if not needed
-end

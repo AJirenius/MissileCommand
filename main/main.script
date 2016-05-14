@@ -1,8 +1,15 @@
 local missile_manager = require "game.missile.missile_manager"
+local score = require "game.score"
+local life = require "game.life"
+
+go.property("is_playing",true)
+
 
 function init(self)
-	self.demo = true
+	self.demo = false
 	math.randomseed(os.time())
+	score.reset()
+	life.reset()
 	
 	self.dt = 0
 	self.max_time = 3
@@ -12,12 +19,21 @@ function init(self)
 end
 
 function update(self, dt)
-	if self.dt < 0 then
-		self.dt = self.max_time
-		self.max_time = self.max_time - 0.1
-		if self.max_time < 0.5 then self.max_time = 0.5 end
-		factory.create("/factories#meteor",nil,nil,{},math.random()*0.5+0.5)
-		if self.demo then missile_manager.add_missile(math.random(800),math.random(300)+300) end	
+	if self.is_playing then
+		if self.dt < 0 then
+			self.dt = self.max_time
+			self.max_time = self.max_time - 0.1
+			if self.max_time < 0.5 then self.max_time = 0.5 end
+			factory.create("/factories#meteor",nil,nil,{},math.random()*0.5+0.5)
+			
+			if self.demo then missile_manager.add_missile(math.random(800),math.random(300)+300) end	
+		end
+		self.dt = self.dt - dt
 	end
-	self.dt = self.dt - dt
+end
+
+function on_message(self, message_id, message)
+	if message_id == hash("game_over") then
+		self.is_playing = false
+	end
 end
